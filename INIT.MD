@@ -1,0 +1,1 @@
+ant modulegen -Dinput.module=accelerator -Dinput.name=spartacustraining -Dinput.package=com.epam.spartacustraining -Dinput.template=develop

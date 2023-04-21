@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testclasses><spartacustrainingfacades><testclass>com.epam.spartacustraining.facades.suggestion.impl.DefaultSimpleSuggestionFacadeTest</testclass><testclass>com.epam.spartacustraining.facades.suggestion.DefaultSimpleSuggestionFacadeIntegrationTest</testclass></spartacustrainingfacades></testclasses>
