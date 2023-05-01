@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
 $styleVersion: 4.3;
-@import '~@spartacus/styles/index';
+@import "~@spartacus/styles/index";
+@import "styles/custom/index";
+
+body {
+  --cx-color-primary: #2142ab;
+  --cx-color-secondary: #96aed0;
+  --cx-color-text: #5c6f68;
+  --cx-color-background: #f5f5f5;
+  --cx-color-dark: #ab8a21;
+  --cx-page-width-max: 1440px;
+  background-color: $cultured !important;
+  font-family: $font-family-brand;
+}

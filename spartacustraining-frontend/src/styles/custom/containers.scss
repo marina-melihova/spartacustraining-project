@@ -1,0 +1,24 @@
+@import "paddings";
+@import "colors";
+@import "borders";
+
+.form-wrap {
+  padding: $form-padding;
+  background: $platinum;
+  box-shadow: 0 1px 2px rgba(47, 66, 83, 0.14);
+  border-radius: $border-radius;
+}
+
+.password {
+  &-wrap {
+    position: relative;
+  }
+  &-icon {
+    position: absolute;
+    top: 11px;
+    right: 12px;
+    font-size: 1.5rem;
+    color: $middle-grey;
+    cursor: pointer;
+  }
+}

@@ -1,14 +1,39 @@
 import { NgModule } from '@angular/core';
 import { translationChunksConfig, translations } from '@spartacus/assets';
-import { AuthConfig, FeaturesConfig, I18nConfig, OccConfig, provideConfig, SiteContextConfig } from '@spartacus/core';
-import { defaultCmsContentProviders, layoutConfig, mediaConfig } from '@spartacus/storefront';
+import {
+  AuthConfig,
+  CmsConfig,
+  FeaturesConfig,
+  I18nConfig,
+  OccConfig,
+  provideConfig,
+  SiteContextConfig,
+} from '@spartacus/core';
+import {
+  defaultCmsContentProviders,
+  layoutConfig,
+  mediaConfig,
+} from '@spartacus/storefront';
 
 import { environment } from '../../environments/environment';
+import { customCmsComponentsConfig } from './config/custom-cms-components.config';
+
+export const translationOverwrites = {
+  en: {
+    userProfile: {
+      register: {
+        phone: {
+          label: 'Phone',
+          placeholder: 'Enter your phone number',
+        },
+      },
+    },
+  },
+};
 
 @NgModule({
   declarations: [],
-  imports: [
-  ],
+  imports: [],
   providers: [
     provideConfig(layoutConfig),
     provideConfig(mediaConfig),
@@ -18,15 +43,15 @@ import { environment } from '../../environments/environment';
         occ: {
           baseUrl: environment.occBaseUrl,
           prefix: environment.occPrefix,
-        }
-      }
+        },
+      },
     }),
     provideConfig(<SiteContextConfig>{
       context: {
         baseSite: [environment.contextBaseSite],
         currency: [environment.contextCurrency],
-        language: [environment.contextLanguage]
-      }
+        language: [environment.contextLanguage],
+      },
     }),
     provideConfig(<AuthConfig>{
       authentication: {
@@ -34,21 +59,28 @@ import { environment } from '../../environments/environment';
         client_secret: environment.authenticationClientSecret,
         OAuthLibConfig: {
           requireHttps: true,
-          scope: 'basic'
-        }
+          scope: 'basic',
+        },
       },
     }),
     provideConfig(<I18nConfig>{
       i18n: {
         resources: translations,
         chunks: translationChunksConfig,
-        fallbackLang: 'en'
-      }
+        fallbackLang: 'en',
+      },
+    }),
+    provideConfig({
+      i18n: { resources: translationOverwrites },
+    }),
+    provideConfig(<CmsConfig>{
+      cmsComponents: customCmsComponentsConfig,
     }),
     provideConfig(<FeaturesConfig>{
       features: {
-        level: '4.3'
-      }
-    })]
+        level: '4.3',
+      },
+    }),
+  ],
 })
-export class SpartacusConfigurationModule { }
+export class SpartacusConfigurationModule {}
