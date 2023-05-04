@@ -8,12 +8,11 @@ import {
   SpinnerModule,
   IconModule,
 } from '@spartacus/storefront';
-
 import { RegisterCustomerComponent } from './register-customer/register-customer.component';
-import { ToggleTypeDirective } from '../../directives/toggle-type.directive';
+import { PasswordVisibilityToggleModule } from 'src/app/features';
 
 @NgModule({
-  declarations: [RegisterCustomerComponent, ToggleTypeDirective],
+  declarations: [RegisterCustomerComponent],
   imports: [
     CommonModule,
     I18nModule,
@@ -23,6 +22,7 @@ import { ToggleTypeDirective } from '../../directives/toggle-type.directive';
     ReactiveFormsModule,
     RouterModule,
     IconModule,
+    PasswordVisibilityToggleModule,
   ],
 })
 export class RegisterModule {}

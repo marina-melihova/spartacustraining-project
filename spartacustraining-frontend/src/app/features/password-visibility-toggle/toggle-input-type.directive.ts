@@ -4,7 +4,7 @@ import { Directive, ElementRef } from '@angular/core';
   selector: '[appToggleType]',
   exportAs: 'inputType',
 })
-export class ToggleTypeDirective {
+export class ToggleInputTypeDirective {
   isShown: boolean = false;
 
   constructor(private el: ElementRef) {}
