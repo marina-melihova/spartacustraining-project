@@ -1,3 +1,4 @@
 .idea
 idea-module-files
-node_modules
+gensrc
+classes
