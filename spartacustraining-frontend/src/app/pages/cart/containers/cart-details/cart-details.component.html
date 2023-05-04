@@ -1,0 +1,15 @@
+<ng-container *ngIf="cart$ | async as cart">
+  <ng-container *ngIf="entries$ | async as entries">
+    <div *ngIf="cart?.totalItems"
+         class="cart-details-wrapper">
+      <cx-promotions [promotions]="(cart.appliedOrderPromotions || []).concat(cart.potentialOrderPromotions || [])">
+      </cx-promotions>
+
+      <cart-item-list [items]="entries"
+                      [cartIsLoading]="!(cartLoaded$ | async)"
+                      [promotionLocation]="promotionLocation"></cart-item-list>
+    </div>
+  </ng-container>
+</ng-container>
+
+<cart-actions [cart$]="cart$"></cart-actions>

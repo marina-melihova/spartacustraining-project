@@ -1,0 +1,29 @@
+.cx-action-link {
+  flex-shrink: 0;
+  @media (min-width: 600px) {
+    font-size: 1.1rem;
+  }
+}
+cx-export-order-entries {
+  margin: 0;
+  width: auto;
+}
+:host ::ng-deep cx-export-order-entries button {
+  @media (min-width: 600px) {
+    font-size: 1.1rem;
+  }
+}
+
+.item-wrap {
+  padding: 15px;
+  .d-flex {
+    flex-direction: column;
+    gap: 15px;
+    @media (min-width: 450px) {
+      flex-direction: row;
+    }
+    @media (min-width: 600px) {
+      gap: 35px;
+    }
+  }
+}

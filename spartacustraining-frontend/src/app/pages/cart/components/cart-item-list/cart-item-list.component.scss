@@ -1,0 +1,14 @@
+@import "colors";
+@import "borders";
+
+.header {
+  background: $ultramarine;
+  color: $white;
+  font-weight: 600;
+  border-radius: $border-radius;
+  padding: 3px;
+}
+
+.cx-item-list-desc {
+  padding-left: 35px;
+}

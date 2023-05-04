@@ -1,9 +1,11 @@
-import { NotAuthGuard } from '@spartacus/core';
 import { RegisterCustomerComponent } from '../../pages/register';
+import { CartDetailsComponent } from '../../pages/cart/containers';
 
 export const customCmsComponentsConfig = {
   RegisterCustomerComponent: {
     component: RegisterCustomerComponent,
-    guards: [NotAuthGuard],
+  },
+  CartComponent: {
+    component: CartDetailsComponent,
   },
 };

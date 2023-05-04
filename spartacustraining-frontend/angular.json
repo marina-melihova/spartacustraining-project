@@ -35,6 +35,9 @@
                 "output": "assets/"
               }
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles/custom"]
+            },
             "styles": [
               "src/styles.scss",
               "src/styles/spartacus/user.scss",
@@ -150,6 +153,9 @@
                 "output": "assets/"
               }
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles"]
+            },
             "styles": [
               "src/styles.scss",
               "src/styles/spartacus/user.scss",

@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RegisterModule } from '../pages';
+import { RegisterModule, CartModule } from '../pages';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    RegisterModule
-  ]
+  imports: [CommonModule, RegisterModule, CartModule],
 })
-export class SpartacusTrainingModule { }
+export class SpartacusTrainingModule {}
