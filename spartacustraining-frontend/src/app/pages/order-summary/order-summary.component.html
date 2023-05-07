@@ -1,0 +1,74 @@
+<ng-container *ngIf="cart$ | async as cart">
+  <ng-container *ngIf="entries$ | async as entries">
+    <h3>{{ 'orderCost.orderSummary' | cxTranslate }}</h3>
+
+    <div class="summary-body"
+         *ngIf="cart">
+      <div class="summary-row">
+        <div class="col-6 summary-label">
+          {{ 'orderCost.subtotal' | cxTranslate }}
+        </div>
+        <div class="col-6 summary-amount">
+          {{ cart.subTotal?.formattedValue }}
+        </div>
+      </div>
+      <div class="summary-row">
+        <div class="col-6 summary-label">
+          {{
+          (cart.deliveryCost?.formattedValue
+          ? 'orderCost.shipping'
+          : 'orderCost.estimatedShipping'
+          ) | cxTranslate
+          }}
+        </div>
+        <div class="col-6 summary-amount">
+          {{
+          cart.deliveryCost?.formattedValue
+          ? cart.deliveryCost.formattedValue
+          : ('orderCost.toBeDetermined' | cxTranslate)
+          }}
+        </div>
+      </div>
+      <div class="summary-row"
+           *ngIf="cart.net; else cartWithoutNet">
+        <div class="col-6">
+          {{ 'orderCost.salesTax' | cxTranslate }}
+        </div>
+        <div class="col-6">
+          {{ cart.totalTax?.formattedValue }}
+        </div>
+      </div>
+      <div class="summary-row summary-total">
+        <div class="col-6 summary-label">
+          {{ 'orderCost.total' | cxTranslate }}
+        </div>
+        <div class="col-6 summary-amount">
+          {{ cart.totalPriceWithTax?.formattedValue }}
+        </div>
+      </div>
+      <div class="summary-row discount"
+           *ngIf="cart.totalDiscounts?.value > 0">
+        {{ 'orderCost.discount' | cxTranslate }}
+        {{ cart.totalDiscounts?.formattedValue }}
+      </div>
+      <ng-template #cartWithoutNet>
+        <div class="summary-row">
+          {{
+          cart.totalPriceWithTax?.value !== cart.totalPrice?.value
+          ? ('orderCost.grossTax' | cxTranslate)
+          : ('orderCost.grossIncludeTax' | cxTranslate)
+          }}
+          {{ cart.totalTax?.formattedValue }}
+        </div>
+      </ng-template>
+    </div>
+
+    <button [routerLink]="{ cxRoute: 'checkout' } | cxUrl"
+            *ngIf="entries.length"
+            class="btn btn-primary btn-block"
+            type="button">
+      {{ 'cartDetails.proceedToCheckout' | cxTranslate }}
+    </button>
+
+  </ng-container>
+</ng-container>

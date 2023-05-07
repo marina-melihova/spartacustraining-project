@@ -1,5 +1,6 @@
 import { RegisterCustomerComponent } from '../../pages/register';
 import { CartDetailsComponent } from '../../pages/cart/containers';
+import { OrderSummaryComponent } from 'src/app/pages/order-summary';
 
 export const customCmsComponentsConfig = {
   RegisterCustomerComponent: {
@@ -7,5 +8,8 @@ export const customCmsComponentsConfig = {
   },
   CartComponent: {
     component: CartDetailsComponent,
+  },
+  CartTotalsComponent: {
+    component: OrderSummaryComponent,
   },
 };

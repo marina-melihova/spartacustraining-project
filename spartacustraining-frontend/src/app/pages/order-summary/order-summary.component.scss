@@ -1,0 +1,45 @@
+@import "colors";
+
+:host {
+  padding-bottom: 2rem;
+  @media (min-width: 982px) {
+    padding-top: 3rem;
+    padding-left: 3rem;
+  }
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: var(--cx-font-weight-semi);
+}
+
+.summary-body {
+  padding-bottom: 1rem;
+}
+
+.summary-total {
+  font-weight: var(--cx-font-weight-bold);
+  font-size: 1.2rem;
+  border-top: 0.1rem solid $platinum;
+}
+
+.summary-amount {
+  text-align: right;
+}
+
+.summary-label {
+  padding: 0;
+}
+
+.summary-row {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.discount {
+  color: var(--cx-color-success);
+  font-weight: var(--cx-font-weight-bold);
+  font-size: 1.2rem;
+}
