@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application xmlns="http://www.zeroturnaround.com">
   <classpath>
-    <dir name="/home/funtushan/Projects/epam/spartacustraining/spartacustraining-project/spartacustraining-backend/hybris/bin/custom/spartacustraining/spartacustrainingbackoffice/backoffice/classes" />
+    <dir name="G:\Sandbox\Spartacus\Projects\spartacustraining\spartacustraining-project\spartacustraining-backend\hybris\bin\custom\spartacustraining\spartacustrainingbackoffice/backoffice/classes" />
   </classpath>
 </application>
