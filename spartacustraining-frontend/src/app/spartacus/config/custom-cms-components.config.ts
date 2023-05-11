@@ -1,6 +1,10 @@
 import { RegisterCustomerComponent } from '../../pages/register';
 import { CartDetailsComponent } from '../../pages/cart/containers';
-import { OrderSummaryComponent } from 'src/app/pages/order-summary';
+import { OrderSummaryComponent } from '../../pages/order-summary';
+import {
+  ProductListComponent,
+  RefinementFacetComponent,
+} from '../../pages/plp/containers';
 
 export const customCmsComponentsConfig = {
   RegisterCustomerComponent: {
@@ -11,5 +15,11 @@ export const customCmsComponentsConfig = {
   },
   CartTotalsComponent: {
     component: OrderSummaryComponent,
+  },
+  CMSProductListComponent: {
+    component: ProductListComponent,
+  },
+  ProductRefinementComponent: {
+    component: RefinementFacetComponent,
   },
 };

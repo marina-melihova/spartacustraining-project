@@ -10,6 +10,8 @@ import {
   SiteContextConfig,
 } from '@spartacus/core';
 import {
+  LayoutSlotConfig,
+  ViewConfig,
   defaultCmsContentProviders,
   layoutConfig,
   mediaConfig,
@@ -17,6 +19,7 @@ import {
 
 import { environment } from '../../environments/environment';
 import { customCmsComponentsConfig } from './config/custom-cms-components.config';
+import { customLayoutSlotsConfig } from './config/custom-layout-slots.config';
 
 export const translationOverwrites = {
   en: {
@@ -75,6 +78,18 @@ export const translationOverwrites = {
     }),
     provideConfig(<CmsConfig>{
       cmsComponents: customCmsComponentsConfig,
+    }),
+    provideConfig(<ViewConfig>{
+      view: {
+        defaultPageSize: 18,
+        infiniteScroll: {
+          active: true,
+          showMoreButton: true,
+        },
+      },
+    }),
+    provideConfig(<LayoutSlotConfig>{
+      layoutSlots: customLayoutSlotsConfig,
     }),
     provideConfig(<FeaturesConfig>{
       features: {

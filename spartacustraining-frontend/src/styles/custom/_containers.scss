@@ -1,13 +1,26 @@
+@import "~bootstrap/scss/_mixins";
 @import "paddings";
 @import "colors";
 @import "borders";
 
-.form-wrap,
-.item-wrap {
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+) !default;
+
+%wrap {
+  display: block;
   padding: $form-padding;
   background: rgba($angel-blue, 0.3);
   box-shadow: 0 1px 2px rgba(47, 66, 83, 0.14);
   border-radius: $border-radius;
+}
+
+.form-wrap {
+  @extend %wrap;
 }
 
 .password {
@@ -22,4 +35,72 @@
     color: $middle-grey;
     cursor: pointer;
   }
+}
+
+.product-container {
+  margin: 40px 0;
+}
+
+.sorting {
+  border-style: solid;
+  border-color: var(--cx-color-light);
+
+  @include media-breakpoint-down(md) {
+    border: none;
+  }
+
+  &.top {
+    border-width: 0 0 1px 0;
+    padding: 0 0 8px 0;
+  }
+
+  &.bottom {
+    border-width: 1px 0 0 0;
+    padding: 25px 0 0px 0;
+  }
+}
+
+.pagination {
+  display: inline-block;
+  vertical-align: top;
+
+  .page-link:hover {
+    color: var(--cx-color-inverse);
+  }
+}
+
+.sort-dropdown {
+  height: 48px;
+  align-items: center;
+  display: flex;
+  span {
+    margin-inline-end: 0.5rem;
+    flex: none;
+  }
+  cx-sorting {
+    width: 100%;
+  }
+  .ng-arrow-wrapper {
+    padding-inline-end: 35px;
+  }
+}
+
+.double-btn-container {
+  display: grid;
+  grid-gap: 5%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.single-btn-container {
+  display: grid;
+  width: 50%;
+  margin: auto;
+}
+
+.grid-btn-padding {
+  padding-top: 25px;
+}
+
+.align-btn {
+  margin-top: 0px !important;
 }

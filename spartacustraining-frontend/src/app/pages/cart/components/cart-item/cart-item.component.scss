@@ -1,4 +1,31 @@
 @import "colors";
+@import "containers";
+
+:host {
+  @extend %wrap;
+  margin: 16px 0;
+}
+
+:host ::ng-deep cx-item-counter {
+  &:not(.readonly) {
+    border: none;
+    align-items: center;
+    column-gap: 5px;
+  }
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $platinum;
+    border-radius: 50%;
+    background-color: $white;
+    line-height: 1.2;
+    font-weight: 600;
+    font-size: 28px;
+  }
+}
 
 .item-title {
   font-size: 1.1rem;
@@ -23,26 +50,5 @@
   .cx-price & {
     font-weight: 600;
     font-size: 1.2rem;
-  }
-}
-
-:host ::ng-deep cx-item-counter {
-  &:not(.readonly) {
-    border: none;
-    align-items: center;
-    column-gap: 5px;
-  }
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 1px solid $platinum;
-    border-radius: 50%;
-    background-color: $white;
-    line-height: 1.2;
-    font-weight: 600;
-    font-size: 28px;
   }
 }

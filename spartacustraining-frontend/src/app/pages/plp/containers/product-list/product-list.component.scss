@@ -1,0 +1,7 @@
+@import "containers";
+
+.cx-page {
+  @include media-breakpoint-down(md) {
+    padding-bottom: 0;
+  }
+}

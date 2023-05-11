@@ -1,20 +1,8 @@
-.cx-action-link {
-  flex-shrink: 0;
-  @media (min-width: 600px) {
-    font-size: 1.1rem;
-  }
-}
-cx-export-order-entries {
-  margin: 0;
-  width: auto;
-}
-:host ::ng-deep cx-export-order-entries button {
-  @media (min-width: 600px) {
-    font-size: 1.1rem;
-  }
-}
+@import "containers";
 
-.item-wrap {
+:host {
+  @extend %wrap;
+  margin: 40px auto;
   padding: 15px;
   .d-flex {
     flex-direction: column;
@@ -26,4 +14,21 @@ cx-export-order-entries {
       gap: 35px;
     }
   }
+}
+
+:host ::ng-deep cx-export-order-entries button {
+  @media (min-width: 600px) {
+    font-size: 1.1rem;
+  }
+}
+
+.cx-action-link {
+  flex-shrink: 0;
+  @media (min-width: 600px) {
+    font-size: 1.1rem;
+  }
+}
+cx-export-order-entries {
+  margin: 0;
+  width: auto;
 }
