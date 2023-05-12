@@ -172,4 +172,13 @@
 		<property name="pagination" type="de.hybris.platform.commerceservices.search.pagedata.PaginationData"/>
 	</bean>
 
+	<bean class="com.epam.spartacustraining.commercewebservices.dto.ComparisonProductsWsDTO">
+		<property name="products"
+				  type="java.util.Collection&lt;de.hybris.platform.commercewebservicescommons.dto.product.ProductWsDTO>">
+		</property>
+		<property name="classifications"
+				  type="java.util.Collection&lt;de.hybris.platform.commercewebservicescommons.dto.product.ClassificationWsDTO>">
+		</property>
+	</bean>
+
 </beans>

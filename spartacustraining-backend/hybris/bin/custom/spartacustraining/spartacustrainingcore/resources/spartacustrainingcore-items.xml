@@ -102,6 +102,15 @@
                     </attribute>
                 </attributes>
             </itemtype>
+
+            <itemtype code="AddToComparisonComponent" extends="SimpleCMSComponent"
+                      jaloclass="com.epam.spartacustraining.core.jalo.AddToComparisonComponent" generate="true"
+                      autocreate="true"/>
+
+            <itemtype code="ProductComparisonComponent" extends="SimpleCMSComponent"
+                      jaloclass="com.epam.spartacustraining.core.jalo.ProductComparisonComponent" generate="true"
+                      autocreate="true"/>
+
         </typegroup>
 
     </itemtypes>
