@@ -5,6 +5,7 @@ import {
   CartModule,
   OrderSummaryModule,
   PlpModule,
+  ComparisonModule,
 } from '../pages';
 
 @NgModule({
@@ -15,6 +16,7 @@ import {
     CartModule,
     OrderSummaryModule,
     PlpModule,
+    ComparisonModule,
   ],
 })
 export class SpartacusTrainingModule {}

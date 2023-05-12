@@ -1,0 +1,6 @@
+<button *ngIf="productCode$ | async"
+        class="btn btn-primary btn-block"
+        type="button"
+        (click)="addToComparison()">
+  {{ 'add to comparison' }}
+</button>
