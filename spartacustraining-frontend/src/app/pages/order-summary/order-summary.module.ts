@@ -7,5 +7,6 @@ import { OrderSummaryComponent } from './order-summary.component';
 @NgModule({
   declarations: [OrderSummaryComponent],
   imports: [CommonModule, RouterModule, UrlModule, I18nModule],
+  exports: [OrderSummaryComponent],
 })
 export class OrderSummaryModule {}

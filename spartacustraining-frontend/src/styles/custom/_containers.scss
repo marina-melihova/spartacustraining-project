@@ -104,3 +104,25 @@ $grid-breakpoints: (
 .align-btn {
   margin-top: 0px !important;
 }
+
+cx-page-layout.MultiStepCheckoutSummaryPageTemplate {
+  order-summary {
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    padding-left: 3.5rem;
+
+    @include media-breakpoint-down(md) {
+      width: 50%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      min-width: 100%;
+      padding-left: 1.375rem;
+      padding-right: 1.375rem;
+    }
+    .btn {
+      display: none;
+    }
+  }
+}

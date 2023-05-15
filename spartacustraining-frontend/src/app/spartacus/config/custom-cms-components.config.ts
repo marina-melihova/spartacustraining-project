@@ -5,6 +5,7 @@ import {
   ProductListComponent,
   RefinementFacetComponent,
 } from '../../pages/plp/containers';
+import { ShippingAddressComponent } from '../../pages/checkout/shipping-address/shipping-address.component';
 
 export const customCmsComponentsConfig = {
   RegisterCustomerComponent: {
@@ -21,5 +22,11 @@ export const customCmsComponentsConfig = {
   },
   ProductRefinementComponent: {
     component: RefinementFacetComponent,
+  },
+  CheckoutOrderSummary: {
+    component: OrderSummaryComponent,
+  },
+  CheckoutShippingAddress: {
+    component: ShippingAddressComponent,
   },
 };

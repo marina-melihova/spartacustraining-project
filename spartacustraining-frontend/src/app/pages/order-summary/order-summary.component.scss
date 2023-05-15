@@ -1,8 +1,10 @@
 @import "colors";
+@import "containers";
 
 :host {
+  display: block;
   padding-bottom: 2rem;
-  @media (min-width: 982px) {
+  @include media-breakpoint-up(lg) {
     padding-top: 3rem;
     padding-left: 3rem;
   }
