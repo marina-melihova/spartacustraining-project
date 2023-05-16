@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ShippingAddressModule } from '.';
+import { ShippingAddressModule, DeliveryModeModule } from '.';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, ShippingAddressModule],
+  imports: [CommonModule, ShippingAddressModule, DeliveryModeModule],
 })
 export class CheckoutModule {}

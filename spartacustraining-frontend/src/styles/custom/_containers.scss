@@ -19,10 +19,6 @@ $grid-breakpoints: (
   border-radius: $border-radius;
 }
 
-.form-wrap {
-  @extend %wrap;
-}
-
 .password {
   &-wrap {
     position: relative;
