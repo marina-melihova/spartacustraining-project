@@ -9,6 +9,7 @@ import {
   ShippingAddressComponent,
   DeliveryModeComponent,
   PaymentDetailsComponent,
+  ReviewOrderComponent,
 } from '../../pages/checkout';
 
 export const customCmsComponentsConfig = {
@@ -38,5 +39,8 @@ export const customCmsComponentsConfig = {
   },
   CheckoutPaymentDetails: {
     component: PaymentDetailsComponent,
+  },
+  CheckoutReviewOrder: {
+    component: ReviewOrderComponent,
   },
 };

@@ -105,11 +105,13 @@ cx-page-layout.MultiStepCheckoutSummaryPageTemplate {
   order-summary {
     width: 100%;
     padding-top: 2rem;
-    padding-bottom: 1rem;
-    padding-left: 3.5rem;
+    padding-left: 2.5rem;
+    padding-bottom: 0;
+    flex: unset;
 
     @include media-breakpoint-down(md) {
       width: 50%;
+      padding-left: 0;
     }
 
     @include media-breakpoint-down(sm) {

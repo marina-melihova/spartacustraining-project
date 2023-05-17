@@ -4,6 +4,7 @@ import {
   ShippingAddressModule,
   DeliveryModeModule,
   PaymentDetailsModule,
+  ReviewOrderModule,
 } from '.';
 
 @NgModule({
@@ -13,6 +14,7 @@ import {
     ShippingAddressModule,
     DeliveryModeModule,
     PaymentDetailsModule,
+    ReviewOrderModule,
   ],
 })
 export class CheckoutModule {}
