@@ -1,0 +1,37 @@
+.cx-payment-form-tooltip {
+  margin-right: 0.1875rem;
+  font-size: 18px;
+  position: relative;
+  top: 2px;
+  color: var(--cx-color-secondary);
+}
+.cx-payment-form-billing {
+  margin-bottom: 1.25rem;
+}
+
+.cx-payment-form-billing-address {
+  padding-top: 0.875rem;
+  padding-bottom: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: var(--cx-font-weight-bold);
+}
+
+.cx-payment-form-exp-date {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  legend {
+    font-size: 1rem;
+  }
+  &-wrapper {
+    flex: 1;
+
+    &:first-of-type {
+      padding-right: 1rem;
+    }
+  }
+}
+
+.form-check {
+  margin: 0;
+}
