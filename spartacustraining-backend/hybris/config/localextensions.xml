@@ -70,6 +70,19 @@
         <extension name='couponservices' />
         <extension name='couponwebservices' />
 
+        <extension name="cmsbackoffice" />
+        <extension name="cmssmartedit" />
+        <extension name="cmssmarteditwebservices" />
+        <extension name="cmswebservices" />
+        <extension name="permissionswebservices" />
+        <extension name="previewwebservices" />
+        <extension name="npmancillary" />
+        <extension name="smartedit" />
+        <extension name="smarteditaddon" />
+        <extension name="smarteditwebservices" />
+        <extension name='smartedittools' />
+        <extension name='personalizationcmsweb' />
+        <extension name='personalizationsmartedit' />
 
         <!-- <extension name='adaptivesearch' />
         <extension name='adaptivesearchbackoffice' />
