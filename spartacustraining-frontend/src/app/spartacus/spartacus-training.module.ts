@@ -7,6 +7,7 @@ import {
   PlpModule,
   ComparisonModule,
   CheckoutModule,
+  Test1cmsModule,
 } from '../pages';
 
 @NgModule({
@@ -19,6 +20,7 @@ import {
     PlpModule,
     ComparisonModule,
     CheckoutModule,
+    Test1cmsModule,
   ],
 })
 export class SpartacusTrainingModule {}

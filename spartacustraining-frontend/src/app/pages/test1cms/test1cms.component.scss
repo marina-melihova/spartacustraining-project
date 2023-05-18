@@ -1,0 +1,10 @@
+.wrapper {
+  margin: 0 auto;
+  padding: 10px;
+  max-width: var(--cx-page-width-max);
+  p {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: var(--cx-font-weight-semi);
+  }
+}

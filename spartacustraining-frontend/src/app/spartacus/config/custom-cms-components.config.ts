@@ -11,6 +11,7 @@ import {
   PaymentDetailsComponent,
   ReviewOrderComponent,
 } from '../../pages/checkout';
+import { Test1cmsComponent } from '../../pages/test1cms/test1cms.component';
 
 export const customCmsComponentsConfig = {
   RegisterCustomerComponent: {
@@ -42,5 +43,8 @@ export const customCmsComponentsConfig = {
   },
   CheckoutReviewOrder: {
     component: ReviewOrderComponent,
+  },
+  test1cmsComponent: {
+    component: Test1cmsComponent,
   },
 };
